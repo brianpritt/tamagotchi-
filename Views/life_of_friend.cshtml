@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tamagotchi</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="/Content/css/styles.css" type="text/css">
+  </head>
+  <body>
+    <div class="container">
+    <h1>@Model.GetName()</h1>
+    <img src="/Content/img/img1.png" alt="" /><br><br>
+    <form action="feed" method="post">
+      <p><button type="submit" class="btn btn-success" name="feedButton">Feed @Model.GetName()</button>Hunger: @Model.GetFood()</p>
+    </form>
+    <form action="play" method="post">
+      <p><button type="submit" class="btn btn-info" name="playButton">Play with @Model.GetName()</button>Friendship: @Model.GetPlay()</p>
+    </form>
+    <form action="sleep" method="post">
+      <p><button type="submit" class="btn btn-warning" name="sleepButton">Put @Model.GetName() to bed</button>Energy: @Model.GetRest()</p>
+    </form>
+    <form class="" action="time" method="post">
+      <button type="submit" class= "btn btn-danger" name="timeButton">Elapse Time</button>
+    </form>
+  </div>
+  </body>
+  </html>
